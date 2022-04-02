@@ -5,5 +5,9 @@ registration of hours worked by each employee in each project and work team, we 
 HTML structure of the landing page of the system requested by the company.
 ## Usage
 To enter the project index, download the entire project from the github repo. Both index and assets. Once downloaded, click on the index and it will open the project on the browser from the local file.
+### Week 02
+We did the HTML for the landing page of Trackgenix SA
+### Week 03
+We did the CSS for the landing page of Trackgenix SA
 
 _By Martín Didoli_
