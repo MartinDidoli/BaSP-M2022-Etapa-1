@@ -13,10 +13,6 @@ header {
     background-color: #373867;
 }
 
-main {
-    margin-left: 184px;
-}
-
 aside {
     float: left;
     position: sticky;
@@ -30,6 +26,14 @@ aside {
     font-size: 12px;
     line-height: 14px;
     font-weight: 400;
+}
+
+main {
+    margin-left: 252px;
+}
+
+.first-section-main {
+    height: 546px;
 }
 
 img {
@@ -151,4 +155,59 @@ a:hover {
 
 .address-side span {
     display: block;
+}
+
+.first-section-main h2 {
+    position: relative;
+    top: 57px;
+    width: 516px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 46.88px;
+}
+
+.first-text-main {
+    position: relative;
+    top: 76.16px;
+    height: 46px;
+    width: 516px;
+    font-size: 20px;
+    line-height: 23.44px;
+}
+
+.img-manage-teams {
+    position: relative;
+    height: 387px;
+    width: 520.2px;
+    top: -76px;
+    left: 587px;
+    border-radius: 10px;
+}
+
+.manage-p-main {
+    position: relative;
+    top: -268.7px;
+    height: 90px;
+    width: 516.53px;
+    font-size: 15px;
+    line-height: 17.58px;
+}
+
+.learn-more-button {
+    position: relative;
+    left: 380px;
+    top: -225px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 17.58px;
+    border: 1px solid #373867;
+    padding: 14px 29.73px;
+    border-radius: 5px;
+}
+
+.line-border {
+    background: color #f0f0f0;;
+    width: 1110px;
+    border-top: 3px solid rgba(55, 56, 103, 0.4);
+    border-radius: 3px;
 }
