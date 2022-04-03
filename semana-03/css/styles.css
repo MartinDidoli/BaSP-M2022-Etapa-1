@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: static;
+    color: #373867;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+header {
+    position: static;
+    height: 77px;
+    width: 100%;
+    background-color: #373867;
+
+}
+
+aside {
+    position: fixed;
+    height: 100%;
+    width: 184px;
+    background-color: #aace9b;
+}
+
+main {
+    position: static;
+    margin-left: 184px;
+}
+
+h1 {
+    display: inline;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 40px;
+}
+
