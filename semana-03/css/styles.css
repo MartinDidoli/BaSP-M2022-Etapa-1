@@ -30,6 +30,7 @@ aside {
 
 main {
     margin-left: 252px;
+    max-width: 1100px;
 }
 
 .first-section-main {
@@ -57,6 +58,7 @@ main {
 
 .boxes-section-main article {
     display: inline-block;
+    position: relative;
     vertical-align: top;
     margin-right: 79px;
     margin-bottom: 50px;
@@ -78,6 +80,27 @@ main {
 
 .story-section-main {
     height: 448px;
+}
+
+nav {
+    margin-top: 57px;
+    height: 115px;
+    margin-bottom: 95px;
+    margin-left: 115px;
+    font-size: 20px;
+    font-weight: 23px;
+}
+
+footer {
+    width: 1100px;
+    height: 100px;
+}
+
+footer img {
+    height: 40px;
+    margin-right: 36px;
+    margin-top: 30px;
+    display: inline;
 }
 
 img {
@@ -327,6 +350,8 @@ a:hover {
 }
 
 .more-button {
+    position: absolute;
+    bottom: 20px;
     font-size: 15px;
     font-weight: 500;
     line-height: 17.58px;
@@ -350,7 +375,6 @@ a:hover {
 
 form {
     display: inline-block;
-    vertical-align: top;
     width: 50%;
 }
 
@@ -391,23 +415,21 @@ form input[type=email] {
     margin-bottom: 20px;
 }
 
+nav ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+
+nav div {
+    display: inline-block;
+    margin-right: 193px;
+}
+
 .line-border-green {
     background: color #f0f0f0;;
     width: 1110px;
     border-top: 3px solid #AACE9B;
     border-radius: 3px;
-}
-
-footer {
-    width: 1100px;
-    height: 100px;
-}
-
-footer img {
-    height: 40px;
-    margin-right: 36px;
-    margin-top: 30px;
-    display: inline;
 }
 
 footer p {
