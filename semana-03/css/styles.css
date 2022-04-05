@@ -281,7 +281,7 @@ a:hover {
     border-radius: 5px;
 }
 
-.function-section-main h2{
+.function-section-main h2 {
     font-size: 30px;
     font-weight: bold;
     width: 199px;
@@ -294,7 +294,7 @@ a:hover {
     border-radius: 3px;
 }
 
-.function-section-main img{
+.function-section-main img {
     height: 140px;
     width: 140px;
     padding-bottom: 50px;
@@ -363,7 +363,7 @@ a:hover {
 .form-section-main h2 {
     font-size: 30px;
     font-weight: bold;
-    width: 671px;
+    width: 267px;
     line-height: 35.16px;
     margin-top: 57px;
     margin-bottom: 50px;
@@ -373,11 +373,6 @@ a:hover {
     border-radius: 3px;
 }
 
-form {
-    display: inline-block;
-    width: 50%;
-}
-
 form ::placeholder {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-weight: 400;
@@ -385,15 +380,116 @@ form ::placeholder {
 }
 
 form input[type=text] {
-    width: 527px;
-    height: 37px;
+    width: 515px;
+    height: 31px;
+    padding-left: 12px;
+    margin-top: 7px;
+    border-color: #373867;
+    border-radius: 4px;
+    border-width: 1px;
 }
 
 form input[type=email] {
-    width: 527px;
-    height: 37px;
+    width: 515px;
+    height: 31px;
+    padding-left: 12px;
+    margin-top: 7px;
+    border-color: #373867;
+    border-radius: 4px;
+    border-width: 1px;
 }
 
+form div {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.full-name label {
+    display: block;
+}
+
+.email-address label {
+    display: block;
+}
+
+.choose-department label {
+    display: block;
+}
+
+select {
+    width: 531px;
+    height: 35px;
+    padding-left: 12px;
+    margin-top: 7px;
+    border-color: #373867;
+    border-radius: 4px;
+    border-width: 1px;
+}
+
+.priority {
+    display: inline-block;
+}
+
+.priority-label {
+    display: block;
+}
+
+.radio-buttons {
+    display: inline;
+}
+
+.radio-buttons label {
+    margin-right: 92px;
+}
+
+.ask-system label {
+    display: block;
+}
+
+.ask-system textarea {
+    display: block;
+    padding-left: 16px;
+    padding-top: 10px;
+    margin-top: 13px;
+    border-color: #373867;
+    border-radius: 4px;
+    border-width: 1px;
+    height: 106px;
+    width: 1094px;
+}
+
+.check-boxes {
+    display: block;
+    margin-top: 40px;
+}
+
+.check-boxes label {
+    margin-right: 59px;
+}
+
+form button {
+    margin-top: 40px;
+    display: inline;
+    font-weight: 500;
+}
+
+.submit-button {
+    font-size: 15px;
+    margin-right: 41px;
+    background-color: #aace9b;
+    padding: 14px 37px;
+    border-radius: 5px;
+    border: 0;
+}
+
+.reset-button {
+    font-size: 15px;
+    background-color: #ffffff;
+    border: 1.5px solid #373867;
+    padding: 14px 37px;
+    border-radius: 5px;
+}
 
 .story-section-main h2 {
     font-size: 30px;
