@@ -9,5 +9,7 @@ To enter the project index, download the entire project from the github repo. Bo
 We did the HTML for the landing page of Trackgenix SA
 ### Week 03
 We did the CSS for the landing page of Trackgenix SA
+### Week 04
+We did the CSS for the landing page of Trackgenix SA using Flexbox
 
 _By Martín Didoli_
