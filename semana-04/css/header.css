@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 40px;
+    padding-left: 40px;
+    height: 77px;
+    background-color: #373867;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+
+header img:nth-child(1) {
+    height: 70px;
+}
+
+@media only screen and (min-width: 900px) {
+    header img:nth-last-child(1) {
+        visibility: hidden;
+    }
+}
