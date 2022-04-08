@@ -11,7 +11,3 @@ img {
 .main-container {
     display: flex;
 }
-
-.main-container aside {
-    justify-content: start;
-}
