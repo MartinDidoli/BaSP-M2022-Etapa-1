@@ -153,8 +153,88 @@ section:nth-of-type(3) a {
     padding: 10px 15px 10px 15px;
 }
 
+form {
+    margin-top: 10%;
+    width: 100%;
+}
 
+form label {
+    font-size: 16px;
+    font-weight: 500;
+}
 
+form ::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+form input[type=text], form input[type=email], select {
+    width: 95%;
+    padding: 10px 0 10px 10px;
+    border-width: 1px;
+    border-color: rgb(55, 56, 103);
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+}
+
+select {
+    width: 98%;
+}
+
+form div:nth-of-type(4) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+}
+
+form input[type=radio] {
+    margin: 0;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px 0 50px 10px;
+    border-width: 1px;
+    border-color: rgb(55, 56, 103);
+    border-radius: 4px;
+    margin: 10px 0 10px 0;
+}
+
+form div:nth-of-type(6) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form div:nth-of-type(7) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 60%;
+    margin: 20px auto;
+}
+
+button[type=submit] {
+    margin-right: 41px;
+    padding: 14px 37px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(170, 206, 155);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+button[type=reset] {
+    font-size: 15px;
+    padding: 14px 37px;
+    border: 1.5px solid rgb(55, 56, 103);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    font-weight: 500;
+}
 
 section:nth-of-type(5) p:nth-of-type(1) {
     margin-top: 7%;

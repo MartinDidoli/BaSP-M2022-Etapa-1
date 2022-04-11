@@ -144,32 +144,56 @@
                 <section>
                     <h3>Get in touch with us</h3>
                     <form>
-                        <label for="fname">Full Name</label>
-                        <input id="fname" type="text" name="fname" placeholder="John Smith">
-                        <label for="emailad">Email Address</label>
-                        <input id="emailad" type="email" name="emailad" placeholder="johnsmith@mail.com">
-                        <label for="department">Choose a department:</label>
-                        <select id="department" name="department">
-                            <option value="none" disabled selected class="area-class">-Area-</option>
-                            <option value="rosario">Rosario</option>
-                            <option value="la-capital">La Capital</option>
-                            <option value="gral-lopez">General Lopez</option>
-                        </select>
+                        <div>
+                            <label for="fname">Full Name</label>
+                            <input id="fname" type="text" name="fname" placeholder="John Smith">
+                        </div>
+                        <div>
+                            <label for="emailad">Email Address</label>
+                            <input id="emailad" type="email" name="emailad" placeholder="johnsmith@mail.com">
+                        </div>
+                        <div>
+                            <label for="department">Choose a department:</label>
+                            <select id="department" name="department">
+                                <option value="none" disabled selected class="area-class">-Area-</option>
+                                <option value="rosario">Rosario</option>
+                                <option value="la-capital">La Capital</option>
+                                <option value="gral-lopez">General Lopez</option>
+                            </select>
+                        </div>
                         <label class="priority-label">Priority</label>
-                        <input id="low" type="radio" name="prioritylvl" value="Low">
-                        <label for="low">Low</label>
-                        <input id="medium" type="radio" name="prioritylvl" value="Medium">
-                        <label for="medium">Medium</label>
-                        <input id="high" type="radio" name="prioritylvl" value="High">
-                        <label for="high">High</label>
-                        <label>Ask about our system</label>
-                        <textarea name="message" placeholder="Enter your message"></textarea>
-                        <input id="notrobot" type="checkbox" name="checkboxes" value="notrobot">
-                        <label for="notrobot">I am not a robot</label>
-                        <input id="sendcopy" type="checkbox" name="checkboxes" value="sendcopy">
-                        <label for="sendcopy">Send me a copy</label>
-                        <button type="submit">Submit</button>
-                        <button type="reset">Reset</button>
+                        <div>
+                            <div>
+                                <input id="low" type="radio" name="prioritylvl" value="Low">
+                                <label for="low">Low</label>
+                            </div>
+                            <div>
+                                <input id="medium" type="radio" name="prioritylvl" value="Medium">
+                                <label for="medium">Medium</label>
+                            </div>
+                            <div>
+                                <input id="high" type="radio" name="prioritylvl" value="High">
+                                <label for="high">High</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Ask about our system</label>
+                            <textarea name="message" placeholder="Enter your message"></textarea>
+                        </div>
+                        <div>
+                            <div>
+                                <input id="sendcopy" type="checkbox" name="checkboxes" value="sendcopy">
+                                <label for="sendcopy">Send me a copy</label>
+                            </div>
+                            <div>
+                                <input id="notrobot" type="checkbox" name="checkboxes" value="notrobot">
+                                <label for="notrobot">I am not a robot</label>
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit">Submit</button>
+                            <button type="reset">Reset</button>
+                        </div>
                     </form>
                 </section>
                 <div class="line-border"></div>
