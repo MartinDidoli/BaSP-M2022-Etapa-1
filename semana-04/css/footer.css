@@ -23,7 +23,13 @@ footer a {
     color: rgba(0, 0, 0, 0.0);
 }
 
-a:focus {
+footer a:focus {
+    background-color: rgb(255, 255, 255);
+    border: 0px solid rgba(0, 0, 0, 0.0);
+    color: rgb(255, 255, 255);
+}
+
+footer a:hover {
     background-color: rgb(255, 255, 255);
     border: 0px solid rgba(0, 0, 0, 0.0);
     color: rgb(255, 255, 255);
@@ -43,4 +49,41 @@ footer p:nth-of-type(2) {
     flex-direction: column;
     max-width: 250px;
     line-height: 46px;
+}
+
+@media only screen and (min-width: 480px) {
+    footer {
+        display: block;
+        padding: 2% 3% 2% 5%;
+    }
+    footer div:nth-of-type(2) {
+        display: inline;
+        line-height: 16px;
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        width: 60%;
+        margin-bottom: 10px;
+    }
+    footer img {
+        width: 60%;
+    }
+    footer p:nth-of-type(2) {
+        display: inline;
+    }
+    footer p {
+        text-align: left;
+    }
+    footer a {
+        display: inline-block;
+        border: 0px solid rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+        color: rgba(0, 0, 0, 0.0);
+    }
 }
