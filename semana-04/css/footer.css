@@ -61,8 +61,6 @@ footer p:nth-of-type(2) {
         line-height: 16px;
     }
     .footer-links {
-        display: flex;
-        flex-direction: row;
         justify-content: space-between;
         align-items: start;
         width: 60%;
@@ -85,5 +83,25 @@ footer p:nth-of-type(2) {
         margin: 0;
         width: fit-content;
         color: rgba(0, 0, 0, 0.0);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    footer div:nth-of-type(2) {
+        float: right;
+        margin: 0;
+    }
+    footer p {
+        text-align: right;
+        line-height: 16px;
+    }
+    .footer-links {
+        float: left;
+        width: fit-content;
+        margin-top: 0;
+        margin-bottom: 0%;
+    }
+    footer img {
+        width: 40%;
     }
 }

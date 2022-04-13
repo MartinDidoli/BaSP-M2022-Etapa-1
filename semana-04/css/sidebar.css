@@ -1,13 +1,69 @@
 aside {
-    position: sticky;
-    width: 200px;
-    height: max-content;
+    position: fixed;
+    margin-top: 77px;
+    left: 0px;
+    display: block;
+    width: 180px;
+    height: 100vh;
     top: 0;
     background-color: rgb(170, 206, 155);
+    color: rgb(55, 56, 103);
     font-size: 12px;
+    padding: 30px 10px 10px 10px;
 }
 
-@media only screen and (max-width: 1024px) {
+aside img {
+    height: 15px;
+}
+
+aside p {
+    width: fit-content;
+    padding-right: 10.35px;
+    padding-bottom: 9px;
+    border-bottom: solid 2px rgb(55, 56, 103);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+aside a {
+    display: block;
+    padding-right: 125.72px;
+    padding-bottom: 18px;
+    padding-left: 0;
+    border-radius: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: solid 1px rgba(55, 56, 103, 0.4);
+}
+
+aside a:hover {
+    color: rgb(55, 56, 103);
+    background-color: rgb(170, 206, 155, 0);
+    text-shadow: 5px 5px 10px rgb(0, 0, 0);
+}
+
+aside a:focus {
+    color: rgb(255, 255, 255);
+    background-color: rgb(170, 206, 155, 0);
+    border-bottom: solid 1px rgba(55, 56, 103, 0.4);
+}
+
+aside > ul > li:nth-child(4) {
+    padding: 15px 0;
+    line-height: 40px;
+}
+
+aside > ul > li > ul > li:nth-of-type(3) span {
+    position: relative;
+    top: -40px;
+    left: 17px;
+    height: 15px;
+    display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
     aside {
         display: none;
     }

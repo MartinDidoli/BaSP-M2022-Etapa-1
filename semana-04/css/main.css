@@ -1,9 +1,10 @@
 main {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    margin-top: 77px;
     flex-grow: 1;
     color: rgb(55, 56, 103);
+    height: 100%;
 }
 
 section {
@@ -14,7 +15,6 @@ section {
 }
 
 section:nth-of-type(1) img {
-    order: 1;
     border-radius: 10px;
 }
 
@@ -40,26 +40,22 @@ a:focus {
 }
 
 h2 {
-    order: 2;
     padding: 2% 0 1% 0;
     font-size: 26px;
     font-weight: bold;
 }
 
 section:nth-of-type(1) p:nth-of-type(1) {
-    order: 3;
     padding: 1% 0 1% 0;
     font-size: 20px;
 }
 
 section:nth-of-type(1) p:nth-of-type(2) {
-    order: 4;
     padding: 1% 0 3% 0;
     font-size: 16px;
 }
 
 section:nth-of-type(1) a {
-    order: 5;
     align-self: flex-start;
 }
 
@@ -289,13 +285,15 @@ nav ol {
         width: fit-content;
     }
     section:nth-of-type(3) img {
-        width: fit-content;
+        width: max-content;
+        height: max-content;
+        object-fit: contain;
     }
     section:nth-of-type(3) article {
         display: inline-block;
         vertical-align: top;
         width: 43%;
-        height: 644px;
+        height: auto;
     }
     section:nth-of-type(3) h4 {
         margin: 0 0 0 0;
@@ -345,7 +343,41 @@ nav ol {
 }
 
 @media only screen and (min-width: 768px) {
+    main {
+        margin-left: 180px;
+    }
     h2 {
         font-size: 36px;
+    }
+    section:nth-of-type(1) {
+        flex-direction: row-reverse;
+    }
+    section:nth-of-type(1) img {
+        width: 50%;
+        margin-left: 10px;
+    }
+    section:nth-of-type(1) p {
+        margin-bottom: 20px;
+    }
+    section:nth-of-type(1) a {
+        float: right;
+        margin-right: 20px;
+    }
+    section:nth-of-type(2) {
+        display: inline-block;
+    }
+    section:nth-of-type(2) h3 {
+        width: fit-content;
+    }
+    section:nth-of-type(2) article {
+        display: inline-block;
+        width: 49%;
+        vertical-align: top;
+    }
+    section:nth-of-type(2) h4 {
+        margin-top: 60px;
+    }
+    section:nth-of-type(2) p {
+        padding: 0 0 0 150px;
     }
 }
