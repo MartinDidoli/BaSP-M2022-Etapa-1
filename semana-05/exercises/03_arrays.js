@@ -9,7 +9,8 @@ Unir todos los elementos del array en un único string donde cada mes este separ
 Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
 */
 
-var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
 
 console.log(meses[4]);
 console.log(meses[10]);
@@ -32,6 +33,7 @@ console.log(meses.reverse());
 
 console.log(meses.join('-'));
 
-var meses1 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+var meses1 = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+"Noviembre", "Diciembre"];
 
 console.log(meses1.slice(4,11));
