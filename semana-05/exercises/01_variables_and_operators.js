@@ -21,7 +21,7 @@ string2 = 'Bien';
 
 stringCombined = string1 + string2;
 
-console.log(stringCombined)
+console.log(stringCombined);
 
 var d, e, f;
 
