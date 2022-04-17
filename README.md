@@ -8,7 +8,7 @@ To enter the project index, download the entire project from the github repo. Bo
 
 You can also use this [link](https://martindidoli.github.io/BaSP-M2022-Etapa-1/semana-04/index.html) to visualize the page.
 
-To visualize the exercises done on the fifth week click on this link [link]().
+To visualize the exercises done on the fifth week click on this link [link](https://martindidoli.github.io/BaSP-M2022-Etapa-1/semana-05/index.html).
 ### Week 02
 We did the HTML for the landing page of Trackgenix SA
 ### Week 03
@@ -16,5 +16,6 @@ We did the CSS for the landing page of Trackgenix SA
 ### Week 04
 We did the CSS for the landing page of Trackgenix SA using Flexbox
 ### Week 05
+We fixed the CSS from the fourth week and did 6 exercises with JavaScript.
 
 _By Martín Didoli_
