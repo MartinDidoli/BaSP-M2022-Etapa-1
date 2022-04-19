@@ -70,13 +70,13 @@ function validacion(a, b){
 
 function sumav4(a, b){
     if (validacion(a,b) === true){
-        return (a+b)
+        return (a+b);
     } else {
         console.log('Uno de los números tiene decimales.');
         return (Math.round(a+b));
     }
 }
 
-resultado = sumav4(4, 1)
+resultado = sumav4(4, 1);
 
 console.log(resultado);

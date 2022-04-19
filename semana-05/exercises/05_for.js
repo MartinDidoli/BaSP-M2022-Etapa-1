@@ -9,7 +9,7 @@ console.log('-Exercise 5.a:');
 var conjunto = ['auto','bicicleta','colectivo','moto','tractor'];
 
 for (var i = 0; i <= 4; i++){
-    console.log(conjunto[i])
+    console.log(conjunto[i]);
 }
 
 //*Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra modificada.
@@ -18,7 +18,7 @@ console.log('-Exercise 5.b:');
 
 for (var i = 0; i <= 4; i++){
     conjunto[i] = conjunto[i].substring(0,1).toUpperCase() + conjunto[i].substring(1,conjunto[i].length);
-    console.log(conjunto[i])
+    console.log(conjunto[i]);
 }
 
 //*Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la cadena completa.
