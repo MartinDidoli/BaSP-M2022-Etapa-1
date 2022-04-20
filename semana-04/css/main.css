@@ -1,17 +1,16 @@
 main {
     display: flex;
     flex-direction: column;
-    margin-top: 77px;
-    flex-grow: 1;
-    color: rgb(55, 56, 103);
     height: 100%;
+    margin-top: 77px;
+    color: rgb(55, 56, 103);
 }
 
 section {
     display: flex;
     flex-direction: column;
     align-items: left;
-    padding: 10% 5% 10% 5%;
+    padding: 30px 5% 30px 5%;
 }
 
 section:nth-of-type(1) img {
@@ -19,13 +18,13 @@ section:nth-of-type(1) img {
 }
 
 a {
-    font-size: 12px;
-    font-weight: 500;
     padding: 15px;
     border: 1px solid rgb(55, 56, 103);
     border-radius: 5px;
     text-decoration: none;
     color: rgb(55, 56, 103);
+    font-size: 12px;
+    font-weight: 500;
 }
 
 a:hover {
@@ -34,8 +33,8 @@ a:hover {
 }
 
 a:focus {
-    background-color: rgb(170, 206, 155);
     border: 1px solid rgba(0, 0, 0, 0);
+    background-color: rgb(170, 206, 155);
     color: rgb(255, 255, 255);
 }
 
@@ -59,31 +58,13 @@ section:nth-of-type(1) a {
     align-self: flex-start;
 }
 
-.line-border {
-    display: flex;
-    align-self: center;
-    width: 90%;
-    border-top: 3px solid rgba(55, 56, 103, 0.4);
-    border-radius: 3px;
-    background: color rgb(240, 240, 240);
-}
-
-.line-border-green {
-    display: flex;
-    align-self: center;
-    width: 90%;
-    border-top: 3px solid rgb(170, 206, 155);
-    border-radius: 3px;
-    background: color rgb(240, 240, 240);
-}
-
 h3 {
     align-self: start;
-    font-size: 22px;
-    font-weight: bold;
     padding-right: 30px;
     padding-bottom: 16px;
     border-bottom: 3px solid rgb(170, 206, 155);
+    font-size: 22px;
+    font-weight: bold;
 }
 
 h4 {
@@ -118,11 +99,11 @@ section:nth-of-type(3) article {
 
 section:nth-of-type(3) img {
     align-self: center;
+    margin: 0 0 3% 0;
     height: 405px;
     width: max-content;
     border-radius: 10px;
     object-fit: cover;
-    margin: 0 0 3% 0;
 }
 
 section:nth-of-type(3) p {
@@ -135,8 +116,8 @@ section:nth-of-type(3) a {
 }
 
 form {
-    margin-top: 10%;
     width: 100%;
+    margin-top: 10%;
 }
 
 form label {
@@ -152,32 +133,46 @@ form ::placeholder {
 
 form input[type=text], form input[type=email], select {
     width: 95%;
+    margin: 10px 0 10px 0;
     padding: 10px 0 10px 10px;
     border-width: 1px;
     border-color: rgb(55, 56, 103);
     border-radius: 4px;
-    margin: 10px 0 10px 0;
 }
 
 select {
     width: 98%;
 }
 
-form div:nth-of-type(4) {
-    display: inline-block;
-    margin: 10px 0;
-    width: 100%;
+form div:nth-of-type(2) > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
 }
 
-.priority-label{
-    display: block;
-    margin: 0 0 5px 0;
-}
-
-form div:nth-of-type(4) > div {
+form div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+form div:nth-of-type(3) > div:nth-of-type(2) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
+
+form div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) {
+    flex-direction: row;
+    align-items: center;
+}
+
+form div:nth-of-type(3) > div:nth-of-type(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 10px;
 }
 
 form input[type=radio] {
@@ -186,26 +181,12 @@ form input[type=radio] {
 
 textarea {
     width: 95%;
+    margin: 10px 0 10px 0;
     padding: 10px 0 50px 10px;
     border-width: 1px;
     border-color: rgb(55, 56, 103);
     border-radius: 4px;
-    margin: 10px 0 10px 0;
-}
-
-form div:nth-of-type(6) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-form div:nth-of-type(7) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 60%;
-    margin: 20px auto;
+    font-family: Roboto, Arial, Arial, Helvetica, sans-serif;
 }
 
 button[type=submit] {
@@ -219,12 +200,12 @@ button[type=submit] {
 }
 
 button[type=reset] {
-    font-size: 15px;
     padding: 14px 37px;
     border: 1.5px solid rgb(55, 56, 103);
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
     font-weight: 500;
+    font-size: 15px;
 }
 
 section:nth-of-type(5) p:nth-of-type(1) {
@@ -240,16 +221,38 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-self: center;
-    padding: 10% 5% 10% 5%;
 }
 
 nav div {
-    margin: 20px;
+    margin: 10px 20px;
 }
 
 nav ol {
     list-style-position: inside;
     list-style-type: decimal;
+}
+
+.line-border {
+    display: flex;
+    align-self: center;
+    width: 90%;
+    border-top: 3px solid rgba(55, 56, 103, 0.4);
+    border-radius: 3px;
+    background: color rgb(240, 240, 240);
+}
+
+.line-border-green {
+    display: flex;
+    align-self: center;
+    width: 90%;
+    border-top: 3px solid rgb(170, 206, 155);
+    border-radius: 3px;
+    background: color rgb(240, 240, 240);
+}
+
+.priority-label{
+    display: flex;
+    margin: 0 0 5px 0;
 }
 
 @media only screen and (min-width: 480px) {
@@ -265,21 +268,34 @@ nav ol {
         font-size: 24px;
     }
     h4 {
-        margin: 70px 0 0 0;
+        margin: 0 0 0 0;
     }
-    section:nth-of-type(2) * {
-        display: block;
-        text-align: left;
+    section:nth-of-type(2) div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
-    section:nth-of-type(2) img {
-        float: left;
+    section:nth-of-type(2) article {
+        display: flex;
+        flex-direction: row;
+    }
+    section:nth-of-type(2) > div > article > div:nth-of-type(1) {
+        width: 50%;
+    }
+    section:nth-of-type(2) > div > article > div:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
     }
     section:nth-of-type(2) p {
         padding: 2% 0 2% 0;
+        text-align: left;
     }
-    section:nth-of-type(3) {
-        display: block;
-        width: 90%;
+    section:nth-of-type(3) div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
     section:nth-of-type(3) h3 {
         width: fit-content;
@@ -290,8 +306,7 @@ nav ol {
         object-fit: contain;
     }
     section:nth-of-type(3) article {
-        display: inline-block;
-        vertical-align: top;
+        display: flex;
         width: 43%;
         height: auto;
     }
@@ -302,36 +317,41 @@ nav ol {
         margin: 20px 0 20px 0;
     }
     form div {
-        display: block;
+        display: flex;
     }
     form > div:nth-of-type(1) {
-        display: inline-block;
-        width: 45%;
-        margin: 0 4% 0 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    form > div:nth-of-type(1) > div {
+        display: flex;
+        flex-direction: column;
+        width: 48%;
     }
     form > div:nth-of-type(2) {
-        display: inline-block;
-        width: 45%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    form > div:nth-of-type(2) > div:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
+        width: 49%;
+    }
+    form > div:nth-of-type(2) > div:nth-of-type(2) {
+        width: 48%;
+    }
+    form > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(2) {
+        margin-top: 15px;
     }
     form > div:nth-of-type(3) {
-        display: inline-block;
-        width: 47%;
-        margin: 0 2% 0 0;
+        flex-direction: column;
     }
-    form > div:nth-of-type(4) {
-        display: inline-block;
-        width: 45%;
+    form > div:nth-of-type(3) > div:nth-of-type(1) {
+        display: flex;
+        flex-direction: column;
     }
     form input[type=text], form input[type=email], select {
-        display: block;
-        width: 100%;
-    }
-    form div:nth-of-type(6) {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        width: 70%;
-        margin: 10px auto;
     }
     nav {
         display: flex;
@@ -364,20 +384,22 @@ nav ol {
         margin-right: 20px;
     }
     section:nth-of-type(2) {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+    }
+    section:nth-of-type(2) > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     section:nth-of-type(2) h3 {
         width: fit-content;
+        margin-bottom: 10px;
     }
     section:nth-of-type(2) article {
-        display: inline-block;
-        width: 49%;
-        vertical-align: top;
+        display: flex;
     }
-    section:nth-of-type(2) h4 {
-        margin-top: 60px;
-    }
-    section:nth-of-type(2) p {
-        padding: 0 0 0 150px;
+    section:nth-of-type(2) img {
+        height: auto;
     }
 }
