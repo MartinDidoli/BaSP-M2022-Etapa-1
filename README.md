@@ -6,7 +6,7 @@ HTML structure of the landing page of the system requested by the company.
 ## Usage
 To enter the project index, download the entire project from the github repo. Once downloaded, click on the index and it will open the project on the browser from the local file.
 
-You can also use this [link](https://martindidoli.github.io/BaSP-M2022-Etapa-1/semana-06/views/) to visualize the pages.
+You can also use this [link](https://martindidoli.github.io/BaSP-M2022-Etapa-1/semana-06/views/landing.html) to visualize the pages.
 
 To visualize the exercises done on the fifth week click on this [link](https://martindidoli.github.io/BaSP-M2022-Etapa-1/semana-05/index.html).
 ### Week 02
