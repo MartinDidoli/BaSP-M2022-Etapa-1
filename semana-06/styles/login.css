@@ -80,7 +80,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    margin: auto auto 200px auto;
+    margin: auto auto 100px auto;
     padding: 40px 30px 70px 40px;
     border: 2px solid rgb(55, 56, 103);
     border-radius: 10px;
