@@ -16,12 +16,9 @@ window.onload = function () {
                 case 0:
                     var firstNameId = document.getElementById("first-name-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         firstNameId.innerHTML = 'Enter a valid First Name';
@@ -30,13 +27,10 @@ window.onload = function () {
                 case 1:
                     var fullAddressId = document.getElementById("full-address-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
                         symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         fullAddressId.innerHTML = 'Enter a valid Address';
@@ -45,12 +39,9 @@ window.onload = function () {
                 case 2:
                     var lastNameId = document.getElementById("last-name-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         lastNameId.innerHTML = 'Enter a valid Last Name';
@@ -59,12 +50,9 @@ window.onload = function () {
                 case 3:
                     var cityId = document.getElementById("city-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         cityId.innerHTML = 'Enter a valid city';
@@ -73,12 +61,9 @@ window.onload = function () {
                 case 4:
                     var idId = document.getElementById("id-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         idId.innerHTML = 'Enter a valid ID';
@@ -87,13 +72,10 @@ window.onload = function () {
                 case 5:
                     var postalCodeId = document.getElementById("postal-code-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
                         str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
                         === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         postalCodeId.innerHTML = 'Enter a valid Postal Code';
@@ -102,16 +84,13 @@ window.onload = function () {
                 case 6:
                     temporalInput = inputArrayVar[i].value;
                     if (temporalInput.length > 7) {
-                        console.log();
                     } else {
-                        
                     }
                     break;
                 case 7:
                     var emailId = document.getElementById("email-id");
                     temporalInput = inputArrayVar[i].value;
                     if (regex.test(temporalInput)) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         emailId.innerHTML = 'Enter a valid Email';
@@ -120,12 +99,9 @@ window.onload = function () {
                 case 8:
                     var phoneNumberId = document.getElementById("phone-number-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         phoneNumberId.innerHTML = 'Enter a valid Phone Number';
@@ -134,12 +110,9 @@ window.onload = function () {
                 case 9:
                     var password1Id = document.getElementById("password-1-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         password1Id.innerHTML = 'Enter a valid Password';
@@ -150,14 +123,12 @@ window.onload = function () {
                     temporalInput = inputArrayVar[i].value;
                     str = inputArrayVar[9].value;
                     if (str === temporalInput && temporalInput.length > 7) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
                         password2Id.innerHTML = 'Enter a valid Password';
                     }
                     break;
                 default:
-                    console.log();
                 }
         }
     }
@@ -168,12 +139,9 @@ window.onload = function () {
                 case 0:
                     var firstNameId = document.getElementById("first-name-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         firstNameId.innerHTML = '';
@@ -182,13 +150,10 @@ window.onload = function () {
                 case 1:
                     var fullAddressId = document.getElementById("full-address-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
                         symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         fullAddressId.innerHTML = '';
@@ -197,12 +162,9 @@ window.onload = function () {
                 case 2:
                     var lastNameId = document.getElementById("last-name-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         lastNameId.innerHTML = '';
@@ -211,12 +173,9 @@ window.onload = function () {
                 case 3:
                     var cityId = document.getElementById("city-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         cityId.innerHTML = '';
@@ -225,12 +184,9 @@ window.onload = function () {
                 case 4:
                     var idId = document.getElementById("id-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         idId.innerHTML = '';
@@ -239,13 +195,10 @@ window.onload = function () {
                 case 5:
                     var postalCodeId = document.getElementById("postal-code-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
                         str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
                         === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         postalCodeId.innerHTML = '';
@@ -254,7 +207,6 @@ window.onload = function () {
                 case 6:
                     temporalInput = inputArrayVar[i].value;
                     if (temporalInput.length > 7) {
-                        console.log();
                     } else {
                         
                     }
@@ -263,7 +215,6 @@ window.onload = function () {
                     var emailId = document.getElementById("email-id");
                     temporalInput = inputArrayVar[i].value;
                     if (regex.test(temporalInput)) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         emailId.innerHTML = '';
@@ -272,12 +223,9 @@ window.onload = function () {
                 case 8:
                     var phoneNumberId = document.getElementById("phone-number-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         phoneNumberId.innerHTML = '';
@@ -286,12 +234,9 @@ window.onload = function () {
                 case 9:
                     var password1Id = document.getElementById("password-1-id");
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         password1Id.innerHTML = '';
@@ -302,14 +247,12 @@ window.onload = function () {
                     temporalInput = inputArrayVar[i].value;
                     str = inputArrayVar[9].value;
                     if (str === temporalInput && temporalInput.length > 7) {
-                        console.log();
                     } else {
                         inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
                         password2Id.innerHTML = '';
                     }
                     break;
                 default:
-                    console.log();
                 }
         }
     }
@@ -322,9 +265,7 @@ window.onload = function () {
             switch(i){
                 case 0:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         alert('First Name: ' + temporalInput);
@@ -334,9 +275,7 @@ window.onload = function () {
                     break;
                 case 1:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
                         symbols.includes(str)) === false) {
@@ -347,9 +286,7 @@ window.onload = function () {
                     break;
                 case 2:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         alert('Last Name: ' + temporalInput);
@@ -359,9 +296,7 @@ window.onload = function () {
                     break;
                 case 3:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                         alert('City: ' + temporalInput);
@@ -371,9 +306,7 @@ window.onload = function () {
                     break;
                 case 4:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         alert('ID Number: ' + temporalInput);
@@ -383,9 +316,7 @@ window.onload = function () {
                     break;
                 case 5:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
                         str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
                         === false) {
@@ -412,9 +343,7 @@ window.onload = function () {
                     break;
                 case 8:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         alert('Phone Number: ' + temporalInput);
@@ -424,9 +353,7 @@ window.onload = function () {
                     break;
                 case 9:
                     temporalInput = inputArrayVar[i].value;
-                    console.log(temporalInput);
                     str = temporalInput.split("");
-                    console.log(str);
                     if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                         alert('Password: ' + temporalInput);
@@ -444,7 +371,6 @@ window.onload = function () {
                     }
                     break;
                 default:
-                    console.log();
             }
         }
         
