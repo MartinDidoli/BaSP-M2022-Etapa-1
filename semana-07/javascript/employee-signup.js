@@ -20,8 +20,8 @@ window.onload = function () {
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        firstNameId.innerHTML = 'Enter a valid First Name';
+                        inputArrayVar[i].classList.add("input-red");
+                        firstNameId.innerHTML = 'It needs at least 3 letters';
                     }
                     break;
                 case 1:
@@ -32,8 +32,8 @@ window.onload = function () {
                         numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
                         symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        fullAddressId.innerHTML = 'Enter a valid Address';
+                        inputArrayVar[i].classList.add("input-red");
+                        fullAddressId.innerHTML = 'It needs 5 nrs/ltrs +space';
                     }
                     break;
                 case 2:
@@ -43,8 +43,8 @@ window.onload = function () {
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        lastNameId.innerHTML = 'Enter a valid Last Name';
+                        inputArrayVar[i].classList.add("input-red");
+                        lastNameId.innerHTML = 'It needs at least 3 letters';
                     }
                     break;
                 case 3:
@@ -54,8 +54,8 @@ window.onload = function () {
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        cityId.innerHTML = 'Enter a valid city';
+                        inputArrayVar[i].classList.add("input-red");
+                        cityId.innerHTML = 'It needs 3 characters';
                     }
                     break;
                 case 4:
@@ -65,8 +65,8 @@ window.onload = function () {
                     if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        idId.innerHTML = 'Enter a valid ID';
+                        inputArrayVar[i].classList.add("input-red");
+                        idId.innerHTML = 'It needs +7 numbers';
                     }
                     break;
                 case 5:
@@ -77,8 +77,8 @@ window.onload = function () {
                         str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
                         === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        postalCodeId.innerHTML = 'Enter a valid Postal Code';
+                        inputArrayVar[i].classList.add("input-red");
+                        postalCodeId.innerHTML = 'Between 4 and 5 numbers';
                     }
                     break;
                 case 6:
@@ -92,7 +92,7 @@ window.onload = function () {
                     temporalInput = inputArrayVar[i].value;
                     if (regex.test(temporalInput)) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
+                        inputArrayVar[i].classList.add("input-red");
                         emailId.innerHTML = 'Enter a valid Email';
                     }
                     break;
@@ -103,8 +103,8 @@ window.onload = function () {
                     if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        phoneNumberId.innerHTML = 'Enter a valid Phone Number';
+                        inputArrayVar[i].classList.add("input-red");
+                        phoneNumberId.innerHTML = 'It needs +10 numbers';
                     }
                     break;
                 case 9:
@@ -114,8 +114,8 @@ window.onload = function () {
                     if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        password1Id.innerHTML = 'Enter a valid Password';
+                        inputArrayVar[i].classList.add("input-red");
+                        password1Id.innerHTML = 'It needs +8 characters';
                     }
                     break;
                 case 10:
@@ -124,8 +124,8 @@ window.onload = function () {
                     str = inputArrayVar[9].value;
                     if (str === temporalInput && temporalInput.length > 7) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(255,0,0)";
-                        password2Id.innerHTML = 'Enter a valid Password';
+                        inputArrayVar[i].classList.add("input-red");
+                        password2Id.innerHTML = 'Not the same as the first one';
                     }
                     break;
                 default:
@@ -143,7 +143,7 @@ window.onload = function () {
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         firstNameId.innerHTML = '';
                     }
                     break;
@@ -155,7 +155,7 @@ window.onload = function () {
                         numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
                         symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         fullAddressId.innerHTML = '';
                     }
                     break;
@@ -166,7 +166,7 @@ window.onload = function () {
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         lastNameId.innerHTML = '';
                     }
                     break;
@@ -177,7 +177,7 @@ window.onload = function () {
                     if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         cityId.innerHTML = '';
                     }
                     break;
@@ -188,7 +188,7 @@ window.onload = function () {
                     if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         idId.innerHTML = '';
                     }
                     break;
@@ -200,7 +200,7 @@ window.onload = function () {
                         str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
                         === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         postalCodeId.innerHTML = '';
                     }
                     break;
@@ -216,7 +216,7 @@ window.onload = function () {
                     temporalInput = inputArrayVar[i].value;
                     if (regex.test(temporalInput)) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         emailId.innerHTML = '';
                     }
                     break;
@@ -227,7 +227,7 @@ window.onload = function () {
                     if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         phoneNumberId.innerHTML = '';
                     }
                     break;
@@ -238,7 +238,7 @@ window.onload = function () {
                     if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         password1Id.innerHTML = '';
                     }
                     break;
@@ -248,7 +248,7 @@ window.onload = function () {
                     str = inputArrayVar[9].value;
                     if (str === temporalInput && temporalInput.length > 7) {
                     } else {
-                        inputArrayVar[i].style.borderColor = "rgb(55, 56, 103)";
+                        inputArrayVar[i].classList.remove("input-red");
                         password2Id.innerHTML = '';
                     }
                     break;

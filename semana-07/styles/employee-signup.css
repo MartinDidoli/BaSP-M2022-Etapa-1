@@ -95,6 +95,10 @@ button:hover {
     border-radius: 10px;
 }
 
+.input-red {
+    border-color: rgb(255, 0, 0);
+}
+
 .line-border-green {
     display: flex;
     flex-direction: row;
