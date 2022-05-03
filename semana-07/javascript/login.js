@@ -57,17 +57,42 @@ window.onload = function() {
         var secondCompare = emptyness();
 
         if (emailVar.value === 'rose@radiumrocket.com' && passwordVar.value === 'BaSP2022') {
-            fetch(loginServer+'?email='+emailVar.value+'?password='+passwordVar.value);
-            alert('Successful login');
+            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .then(alert('Request was successful \nEmail: rose@radiumrocket.com \nPassword: BaSP2022 '))
+            .catch(function(error){
+                alert('Request error:' + error)
+            })
         } else if (firstCompare === false && secondCompare === true) {
-            alert('Email invalid \nPassword Invalid');
+            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(function(error){
+                alert('Email invalid \nPassword Invalid')
+            })
         } else if (secondCompare === true) {
-            alert('Password invalid')
+            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(function(error){
+                alert('Password invalid')
+            })
         } else if ( firstCompare === true && secondCompare === false) {
-            fetch(loginServer+'?email='+emailVar.value+'?password='+passwordVar.value);
-            alert('Email: ' + emailVar.value + '\nPassword: ' + passwordVar.value + '\nThe request was done successfully');
+            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(function(error){
+                alert('Request error:' + error)
+            })
         } else {
-            alert('Email invalid')
+            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(function(error){
+                alert('Email invalid')
+            })
+            
         }
     }
 

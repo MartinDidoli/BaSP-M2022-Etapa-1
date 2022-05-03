@@ -1,6 +1,7 @@
 window.onload = function () {
 
     var inputArrayVar = document.getElementsByTagName("input");
+    
     var btnCreate = document.querySelector("button");
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     var numbers = ['0','1','2','3','4','5','6','7','8','9'];
@@ -10,127 +11,126 @@ window.onload = function () {
     "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
     "Q","R","S","T","U","V","W","X","Y","Z"];
 
-    function validateInput() {
-        for (var i = 0; i <= 10; i++) {
-            switch(i){
-                case 0:
-                    var firstNameId = document.getElementById("first-name-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
-                        numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        firstNameId.innerHTML = 'It needs at least 3 letters';
-                    }
-                    break;
-                case 1:
-                    var fullAddressId = document.getElementById("full-address-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
-                        numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
-                        symbols.includes(str)) === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        fullAddressId.innerHTML = 'It needs 5 nrs/ltrs +space';
-                    }
-                    break;
-                case 2:
-                    var lastNameId = document.getElementById("last-name-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
-                        numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        lastNameId.innerHTML = 'It needs at least 3 letters';
-                    }
-                    break;
-                case 3:
-                    var cityId = document.getElementById("city-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
-                        numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        cityId.innerHTML = 'It needs 3 characters';
-                    }
-                    break;
-                case 4:
-                    var idId = document.getElementById("id-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
-                        letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        idId.innerHTML = 'It needs +7 numbers';
-                    }
-                    break;
-                case 5:
-                    var postalCodeId = document.getElementById("postal-code-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
-                        str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
-                        === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        postalCodeId.innerHTML = 'Between 4 and 5 numbers';
-                    }
-                    break;
-                case 6:
-                    temporalInput = inputArrayVar[i].value;
-                    if (temporalInput.length > 7) {
-                    } else {
-                    }
-                    break;
-                case 7:
-                    var emailId = document.getElementById("email-id");
-                    temporalInput = inputArrayVar[i].value;
-                    if (regex.test(temporalInput)) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        emailId.innerHTML = 'Enter a valid Email';
-                    }
-                    break;
-                case 8:
-                    var phoneNumberId = document.getElementById("phone-number-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
-                        letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        phoneNumberId.innerHTML = 'It needs +10 numbers';
-                    }
-                    break;
-                case 9:
-                    var password1Id = document.getElementById("password-1-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = temporalInput.split("");
-                    if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
-                        numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        password1Id.innerHTML = 'It needs +8 characters';
-                    }
-                    break;
-                case 10:
-                    var password2Id = document.getElementById("password-2-id");
-                    temporalInput = inputArrayVar[i].value;
-                    str = inputArrayVar[9].value;
-                    if (str === temporalInput && temporalInput.length > 7) {
-                    } else {
-                        inputArrayVar[i].classList.add("input-red");
-                        password2Id.innerHTML = 'Not the same as the first one';
-                    }
-                    break;
-                default:
+    function validateInput(numberToValid) {
+        console.log(numberToValid);
+        switch(numberToValid){
+            case 0:
+                var firstNameId = document.getElementById("first-name-id");
+                temporalInput = inputArrayVar[numberToValid].value;
+                str = temporalInput.split("");
+                if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                    numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                } else {
+                    inputArrayVar[numberToValid].classList.add("input-red");
+                    firstNameId.innerHTML = 'It needs at least 3 letters';
                 }
-        }
+                break;
+            case 1:
+                var fullAddressId = document.getElementById("full-address-id");
+                temporalInput = inputArrayVar[i].value;
+                str = temporalInput.split("");
+                if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                    numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
+                    symbols.includes(str)) === false) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    fullAddressId.innerHTML = 'It needs 5 nrs/ltrs +space';
+                }
+                break;
+            case 2:
+                var lastNameId = document.getElementById("last-name-id");
+                temporalInput = inputArrayVar[i].value;
+                str = temporalInput.split("");
+                if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                    numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    lastNameId.innerHTML = 'It needs at least 3 letters';
+                }
+                break;
+            case 3:
+                var cityId = document.getElementById("city-id");
+                temporalInput = inputArrayVar[i].value;
+                str = temporalInput.split("");
+                if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                    numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    cityId.innerHTML = 'It needs 3 characters';
+                }
+                break;
+            case 4:
+                var idId = document.getElementById("id-id");
+                temporalInput = inputArrayVar[i].value;
+                str = temporalInput.split("");
+                if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+                    letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    idId.innerHTML = 'It needs +7 numbers';
+                }
+                break;
+            case 5:
+                var postalCodeId = document.getElementById("postal-code-id");
+                temporalInput = inputArrayVar[i].value;
+                str = temporalInput.split("");
+                if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
+                    str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
+                    === false) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    postalCodeId.innerHTML = 'Between 4 and 5 numbers';
+                }
+                break;
+            case 6:
+                temporalInput = inputArrayVar[i].value;
+                if (temporalInput.length > 7) {
+                } else {
+                }
+                break;
+            case 7:
+                var emailId = document.getElementById("email-id");
+                temporalInput = inputArrayVar[i].value;
+                if (regex.test(temporalInput)) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    emailId.innerHTML = 'Enter a valid Email';
+                }
+                break;
+            case 8:
+                var phoneNumberId = document.getElementById("phone-number-id");
+                temporalInput = inputArrayVar[i].value;
+                str = temporalInput.split("");
+                if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+                    letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    phoneNumberId.innerHTML = 'It needs +10 numbers';
+                }
+                break;
+            case 9:
+                var password1Id = document.getElementById("password-1-id");
+                temporalInput = inputArrayVar[i].value;
+                str = temporalInput.split("");
+                if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
+                    numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    password1Id.innerHTML = 'It needs +8 characters';
+                }
+                break;
+            case 10:
+                var password2Id = document.getElementById("password-2-id");
+                temporalInput = inputArrayVar[i].value;
+                str = inputArrayVar[9].value;
+                if (str === temporalInput && temporalInput.length > 7) {
+                } else {
+                    inputArrayVar[i].classList.add("input-red");
+                    password2Id.innerHTML = 'Not the same as the first one';
+                }
+                break;
+            default:
+            }
     }
 
     function deleteText() {
@@ -377,8 +377,8 @@ window.onload = function () {
     }
 
     for (var i = 0; i <= 10; i++){
-        inputArrayVar[i].addEventListener("blur", validateInput);
-        inputArrayVar[i].addEventListener("focus", deleteText);
+        inputArrayVar[i].addEventListener("blur", validateInput(i));
+        inputArrayVar[i].addEventListener("focus", deleteText(i));
     }
     btnCreate.addEventListener("click", buttonClicked);
 
