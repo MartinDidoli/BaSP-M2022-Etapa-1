@@ -6,6 +6,7 @@ window.onload = function() {
     var textEmailLogin = document.getElementById("text-email-login");
     var textPasswordLogin = document.getElementById("text-password-login");
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    var loginServer = 'https://basp-m2022-api-rest-server.herokuapp.com/login';
     var numbers = ['0','1','2','3','4','5','6','7','8','9'];
     var letters = ["a","b","c","d","e","f","g","h","i","j","k",
     "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
@@ -56,13 +57,15 @@ window.onload = function() {
         var secondCompare = emptyness();
 
         if (emailVar.value === 'rose@radiumrocket.com' && passwordVar.value === 'BaSP2022') {
+            fetch(loginServer+'?email='+emailVar.value+'?password='+passwordVar.value);
             alert('Successful login');
         } else if (firstCompare === false && secondCompare === true) {
             alert('Email invalid \nPassword Invalid');
         } else if (secondCompare === true) {
             alert('Password invalid')
         } else if ( firstCompare === true && secondCompare === false) {
-            alert('Email: ' + emailVar.value + '\nPassword: ' + passwordVar.value  );
+            fetch(loginServer+'?email='+emailVar.value+'?password='+passwordVar.value);
+            alert('Email: ' + emailVar.value + '\nPassword: ' + passwordVar.value + '\nThe request was done successfully');
         } else {
             alert('Email invalid')
         }
