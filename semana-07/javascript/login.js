@@ -65,19 +65,9 @@ window.onload = function() {
                 alert('Request error:' + error)
             })
         } else if (firstCompare === false && secondCompare === true) {
-            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(function(error){
-                alert('Email invalid \nPassword Invalid')
-            })
+            alert('Email invalid \nPassword Invalid');
         } else if (secondCompare === true) {
-            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(function(error){
-                alert('Password invalid')
-            })
+            alert('Password invalid')
         } else if ( firstCompare === true && secondCompare === false) {
             fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
             .then(response => response.json())
@@ -86,13 +76,7 @@ window.onload = function() {
                 alert('Request error:' + error)
             })
         } else {
-            fetch(loginServer+'?email='+emailVar.value+'&password='+passwordVar.value)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(function(error){
-                alert('Email invalid')
-            })
-            
+            alert('Email invalid')
         }
     }
 

@@ -1,7 +1,6 @@
 window.onload = function () {
 
     var inputArrayVar = document.getElementsByTagName("input");
-    
     var btnCreate = document.querySelector("button");
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     var numbers = ['0','1','2','3','4','5','6','7','8','9'];
@@ -376,10 +375,8 @@ window.onload = function () {
         
     }
 
-    for (var i = 0; i <= 10; i++){
-        inputArrayVar[i].addEventListener("blur", validateInput(i));
-        inputArrayVar[i].addEventListener("focus", deleteText(i));
-    }
+    inputArrayVar[i].addEventListener("blur", validateInput(i));
+    inputArrayVar[i].addEventListener("focus", deleteText(i));
     btnCreate.addEventListener("click", buttonClicked);
 
 }
