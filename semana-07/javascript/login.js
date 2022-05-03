@@ -6,13 +6,18 @@ window.onload = function() {
     var textEmailLogin = document.getElementById("text-email-login");
     var textPasswordLogin = document.getElementById("text-password-login");
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    var numbers = ['0','1','2','3','4','5','6','7','8','9'];
+    var letters = ["a","b","c","d","e","f","g","h","i","j","k",
+    "l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", 
+    "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
+    "Q","R","S","T","U","V","W","X","Y","Z"];
 
     function validateEmail() {
         if (regex.test(emailVar.value)){
-            emailVar.style.borderColor = "rgb(55, 56, 103)";
+            emailVar.classList.remove("input-red");
             return true;
         } else {
-            emailVar.style.borderColor = "rgb(255,0,0)";
+            emailVar.classList.add("input-red");
             textEmailLogin.innerHTML = 'Enter a valid Email' ;
             return false;
         }
@@ -27,13 +32,21 @@ window.onload = function() {
     }
 
     function emptyness() {
-        if (passwordVar.value == ''){
-            passwordVar.style.borderColor = "rgb(255,0,0)";
-            textPasswordLogin.innerHTML = 'Enter a valid Password';
+
+        var passwordCheck = passwordVar.value.split("");
+
+        if (passwordCheck.some(passwordCheck => letters.includes(passwordCheck)) === true &&
+            passwordCheck.some(passwordCheck => numbers.includes(passwordCheck)) === true) {
+            passwordVar.classList.remove("input-red");
+            return false;
+        } else if (passwordCheck == '') {
+            passwordVar.classList.add("input-red");
+            textPasswordLogin.innerHTML = 'Enter a Password';
             return true;
         } else {
-            passwordVar.style.borderColor = "rgb(55, 56, 103)";
-            return false;
+            passwordVar.classList.add("input-red");
+            textPasswordLogin.innerHTML = 'Enter a Password with numbers and letters';
+            return true;
         }
     }
 
@@ -42,15 +55,16 @@ window.onload = function() {
         var firstCompare = validateEmail();
         var secondCompare = emptyness();
 
-        if ( firstCompare === true && secondCompare === false) {
-            alert('Email: ' + emailVar.value + '\nPassword: ' + passwordVar.value  );
-        } else if (firstCompare === false) {
-            alert('Email invalid');
-            if (secondCompare === true) {
-                alert('Password invalid');
-            }
+        if (emailVar.value === 'rose@radiumrocket.com' && passwordVar.value === 'BaSP2022') {
+            alert('Successful login');
+        } else if (firstCompare === false && secondCompare === true) {
+            alert('Email invalid \nPassword Invalid');
         } else if (secondCompare === true) {
             alert('Password invalid')
+        } else if ( firstCompare === true && secondCompare === false) {
+            alert('Email: ' + emailVar.value + '\nPassword: ' + passwordVar.value  );
+        } else {
+            alert('Email invalid')
         }
     }
 
