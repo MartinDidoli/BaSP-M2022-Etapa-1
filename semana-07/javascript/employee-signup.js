@@ -15,6 +15,7 @@ window.onload = function () {
     var password2Id = document.getElementById("repeat-password");
     var btnCreate = document.querySelector("button");
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    var signupServer = 'https://basp-m2022-api-rest-server.herokuapp.com/signup';
     var numbers = ['0','1','2','3','4','5','6','7','8','9'];
     var symbols = ["!","#","$","%","&","/","(",")","=","?","¡","¿","+","*","[","]","{","}","-",".", "@"];
     var letters = ["a","b","c","d","e","f","g","h","i","j","k",
@@ -102,7 +103,7 @@ window.onload = function () {
         year = temporalInput[0];
         month = temporalInput[1];
         day = temporalInput[2];
-        fullDate = day + '/' + month + '/' + year;
+        fullDate = month + '/' + day + '/' + year;
         if (year > 1920 && year < 2002 && month > 0 && month < 13 && day > 0 && day < 32) {
         } else {
             birthDateId.classList.add("input-red");
@@ -235,7 +236,7 @@ window.onload = function () {
         year = temporalInput[0];
         month = temporalInput[1];
         day = temporalInput[2];
-        fullDate = day + '/' + month + '/' + year;
+        fullDate = month + '/' + day + '/' + year;
         if (year > 1920 && year < 2002 && month > 0 && month < 13 && day > 0 && day < 32) {
         } else {
             birthDateId.classList.remove("input-red");
@@ -361,7 +362,7 @@ window.onload = function () {
                     year = temporalInput[0];
                     month = temporalInput[1];
                     day = temporalInput[2];
-                    fullDate = day + '/' + month + '/' + year;
+                    fullDate = month + '/' + day + '/' + year;
                     if (year > 1920 && year < 2002 && month > 0 && month < 13 && day > 0 && day < 32) {
                         varBig[i] = fullDate;
                     } else {
@@ -408,8 +409,22 @@ window.onload = function () {
                 default:
             }
         }
-        if (varBig[11] != '') {
+        if (varBig[11] != undefined) {
             alert(varBig[11]);
+        } else {
+            fetch(signupServer+"?name="+varBig[0]+"&lastName="+varBig[2]+"&dni="+varBig[4]+"&dob="+varBig[6]+"&phone="+
+            varBig[8]+"&address="+varBig[1]+"&city="+varBig[3]+"&zip="+varBig[5]+"&email="+varBig[7]+"&password="+varBig[9])
+            .then(function (response) {
+                console.log(response);
+                return response.json();
+              })
+            .then(function (jsonResponse) {
+                console.log(jsonResponse)
+                alert(jsonResponse.msg)
+            })
+            .catch(function(error){
+                alert('Request error:' + error)
+            })
         }
     }
 
