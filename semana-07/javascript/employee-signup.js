@@ -1,6 +1,17 @@
 window.onload = function () {
 
-    var inputArrayVar = document.getElementsByTagName("input");
+    /*var inputArrayVar = document.getElementsByTagName("input");*/
+    var firstNameId = document.getElementById("only-name");
+    var fullAddressId = document.getElementById("full-address");
+    var lastNameId = document.getElementById("only-last-name");
+    var cityId = document.getElementById("city-live");
+    var idId = document.getElementById("id-number");
+    var postalCodeId = document.getElementById("postal-code");
+    var birthDateId = document.getElementById("birth-date");
+    var emailId = document.getElementById("email-login");
+    var phoneNumberId = document.getElementById("phone-number");
+    var password1Id = document.getElementById("password-login");
+    var password2Id = document.getElementById("repeat-password");
     var btnCreate = document.querySelector("button");
     var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     var numbers = ['0','1','2','3','4','5','6','7','8','9'];
@@ -10,6 +21,403 @@ window.onload = function () {
     "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P",
     "Q","R","S","T","U","V","W","X","Y","Z"];
 
+    function validateFirstName() {
+        var nameFirstError = document.getElementById("first-name-id");
+        temporalInput = firstNameId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            firstNameId.classList.add("input-red");
+            nameFirstError.innerHTML = 'It needs at least 3 letters';
+        }
+    }
+
+    function validatefullAddressId() {
+        var addressError = document.getElementById("full-address-id");
+        temporalInput = fullAddressId.value;
+        str = temporalInput.split("");
+        if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
+            symbols.includes(str)) === false) {
+        } else {
+            fullAddressId.classList.add("input-red");
+            addressError.innerHTML = 'It needs 5 nrs/ltrs +space';
+        }
+    }
+
+    function validatelastNameId() {
+        var lastNameError = document.getElementById("last-name-id");
+        temporalInput = lastNameId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            lastNameId.classList.add("input-red");
+            lastNameError.innerHTML = 'It needs at least 3 letters';
+        }
+    }
+
+    function validatecityId() {
+        var cityError = document.getElementById("city-id");
+        temporalInput = cityId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            cityId.classList.add("input-red");
+            cityError.innerHTML = 'It needs 3 characters';
+        }
+    }
+
+    function validateidId() {
+        var idError = document.getElementById("id-id");
+        temporalInput = idId.value;
+        str = temporalInput.split("");
+        if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+            letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            idId.classList.add("input-red");
+            idError.innerHTML = 'It needs +7 numbers';
+        }
+    }
+
+    function validatepostalCodeId() {
+        var postalCodeError = document.getElementById("postal-code-id");
+        temporalInput = postalCodeId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
+            str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
+            === false) {
+        } else {
+            postalCodeId.classList.add("input-red");
+            postalCodeError.innerHTML = 'Between 4 and 5 numbers';
+        }
+    }
+
+    function validatebirthDateId() {
+        temporalInput = inputArrayVar[i].value;
+        if (temporalInput.length > 7) {
+        } else {
+        }
+    }
+
+    function validateemailId() {
+        var emailError = document.getElementById("email-id");
+        temporalInput = emailId.value;
+        if (regex.test(temporalInput)) {
+        } else {
+            emailId.classList.add("input-red");
+            emailError.innerHTML = 'Enter a valid Email';
+        }
+    }
+
+    function validatephoneNumberId() {
+        var phoneNumberError = document.getElementById("phone-number-id");
+        temporalInput = phoneNumberId.value;
+        str = temporalInput.split("");
+        if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+            letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            phoneNumberId.classList.add("input-red");
+            phoneNumberError.innerHTML = 'It needs +10 numbers';
+        }
+    }
+
+    function validatepassword1Id() {
+        var password1Error = document.getElementById("password-1-id");
+        temporalInput = password1Id.value;
+        str = temporalInput.split("");
+        if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
+            numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            password1Id.classList.add("input-red");
+            password1Error.innerHTML = 'It needs +8 characters';
+        }
+    }
+
+    function validatepassword2Id() {
+        var password2Error = document.getElementById("password-2-id");
+        temporalInput = password2Id.value;
+        str = password1Id.value;
+        if (str === temporalInput && temporalInput.length > 7) {
+        } else {
+            password2Id.classList.add("input-red");
+            password2Error.innerHTML = 'Not the same as the first one';
+        }
+    }
+
+    function deleteFirstName() {
+        var nameFirstError = document.getElementById("first-name-id");
+        temporalInput = firstNameId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            firstNameId.classList.remove("input-red");
+            nameFirstError.innerHTML = '';
+        }
+    }
+
+    function deletefullAddressId() {
+        var addressError = document.getElementById("full-address-id");
+        temporalInput = fullAddressId.value;
+        str = temporalInput.split("");
+        if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
+            symbols.includes(str)) === false) {
+        } else {
+            fullAddressId.classList.remove("input-red");
+            addressError.innerHTML = '';
+        }
+    }
+
+    function deletelastNameId() {
+        var lastNameError = document.getElementById("last-name-id");
+        temporalInput = lastNameId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            lastNameId.classList.remove("input-red");
+            lastNameError.innerHTML = '';
+        }
+    }
+
+    function deletecityId() {
+        var cityError = document.getElementById("city-id");
+        temporalInput = cityId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+            numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            cityId.classList.remove("input-red");
+            cityError.innerHTML = '';
+        }
+    }
+
+    function deleteidId() {
+        var idError = document.getElementById("id-id");
+        temporalInput = idId.value;
+        str = temporalInput.split("");
+        if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+            letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            idId.classList.remove("input-red");
+            idError.innerHTML = '';
+        }
+    }
+
+    function deletepostalCodeId() {
+        var postalCodeError = document.getElementById("postal-code-id");
+        temporalInput = postalCodeId.value;
+        str = temporalInput.split("");
+        if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
+            str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
+            === false) {
+        } else {
+            postalCodeId.classList.remove("input-red");
+            postalCodeError.innerHTML = '';
+        }
+    }
+
+    function deletebirthDateId() {
+        temporalInput = inputArrayVar[i].value;
+        if (temporalInput.length > 7) {
+        } else {
+            
+        }
+    }
+
+    function deleteemailId() {
+        var emailError = document.getElementById("email-id");
+        temporalInput = emailId.value;
+        if (regex.test(temporalInput)) {
+        } else {
+            emailId.classList.remove("input-red");
+            emailError.innerHTML = '';
+        }
+    }
+
+    function deletephoneNumberId() {
+        var phoneNumberError = document.getElementById("phone-number-id");
+        temporalInput = phoneNumberId.value;
+        str = temporalInput.split("");
+        if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+            letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            phoneNumberId.classList.remove("input-red");
+            phoneNumberError.innerHTML = '';
+        }
+    }
+
+    function deletepassword1Id() {
+        var password1Error = document.getElementById("password-1-id");
+        temporalInput = password1Id.value;
+        str = temporalInput.split("");
+        if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
+            numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+        } else {
+            password1Id.classList.remove("input-red");
+            password1Error.innerHTML = '';
+        }
+    }
+
+    function deletepassword2Id() {
+        var password2Error = document.getElementById("password-2-id");
+        temporalInput = password2Id.value;
+        str = password1Id.value;
+        if (str === temporalInput && temporalInput.length > 7) {
+        } else {
+            password2Id.classList.remove("input-red");
+            password2Error.innerHTML = '';
+        }
+    }
+
+    function buttonClicked() {
+        var temporalInput,str,varBig;
+
+        for (var i = 0; i <= 10; i++){
+            switch(i){
+                case 0:
+                    temporalInput = firstNameId.value;
+                    str = temporalInput.split("");
+                    if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                        numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('First Name Invalid');
+                    }
+                    break;
+                case 1:
+                    temporalInput = fullAddressId.value;
+                    str = temporalInput.split("");
+                    if (str.length > 4 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                        numbers.includes(str)) === true && str.includes(' ') === true && str.some(str =>
+                        symbols.includes(str)) === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Address Invalid');
+                    }
+                    break;
+                case 2:
+                    temporalInput = lastNameId.value;
+                    str = temporalInput.split("");
+                    if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                        numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Last Name Invalid');
+                    }
+                    break;
+                case 3:
+                    temporalInput = cityId.value;
+                    str = temporalInput.split("");
+                    if (str.length > 3 && str.some(str => letters.includes(str)) === true && str.some(str =>
+                        numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('City Invalid');
+                    }
+                    break;
+                case 4:
+                    temporalInput = idId.value;
+                    str = temporalInput.split("");
+                    if (str.length > 6 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+                        letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('ID Number Invalid');
+                    }
+                    break;
+                case 5:
+                    temporalInput = postalCodeId.value;
+                    str = temporalInput.split("");
+                    if (str.length > 3 && str.length < 6 && str.some(str => numbers.includes(str)) === true &&
+                        str.some(str => letters.includes(str)) === false && str.some(str => symbols.includes(str))
+                        === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Postal Code Invalid');
+                    }
+                    break;
+                case 6:
+                    temporalInput = birthDateId.value;
+                    if (temporalInput.length > 7) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Birth date Invalid');
+                    }
+                    break;
+                case 7:
+                    temporalInput = emailId.value;
+                    if (regex.test(temporalInput)) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Email invalid');
+                    }
+                    break;
+                case 8:
+                    temporalInput = phoneNumberId.value;
+                    str = temporalInput.split("");
+                    if (str.length === 10 && str.some(str => numbers.includes(str)) === true && str.some(str =>
+                        letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Phone Number Invalid');
+                    }
+                    break;
+                case 9:
+                    temporalInput = password1Id.value;
+                    str = temporalInput.split("");
+                    if (str.length > 7 && str.some(str => letters.includes(str)) === true  && str.some(str =>
+                        numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Password Invalid');
+                    }
+                    break;
+                case 10:
+                    temporalInput = password2Id.value;
+                    str = password1Id.value;
+                    if (str === temporalInput && temporalInput.length > 7) {
+                        varBig[i] = temporalInput;
+                    } else {
+                        alert('Not the same as the first');
+                    }
+                    break;
+                default:
+            }
+            console.log(varBig);
+        }
+    }
+
+
+    firstNameId.addEventListener("blur", validateFirstName);
+    firstNameId.addEventListener("focus", deleteFirstName);
+    fullAddressId.addEventListener("blur", validatefullAddressId);
+    fullAddressId.addEventListener("focus", deletefullAddressId);   
+    lastNameId.addEventListener("blur", validatelastNameId);
+    lastNameId.addEventListener("focus", deletelastNameId);
+    cityId.addEventListener("blur", validatecityId);
+    cityId.addEventListener("focus", deletecityId);
+    idId.addEventListener("blur", validateidId);
+    idId.addEventListener("focus", deleteidId);
+    postalCodeId.addEventListener("blur", validatepostalCodeId);
+    postalCodeId.addEventListener("focus", deletepostalCodeId);
+    birthDateId.addEventListener("blur", validatebirthDateId);
+    birthDateId.addEventListener("focus", deletebirthDateId);
+    emailId.addEventListener("blur", validateemailId);
+    emailId.addEventListener("focus", deleteemailId);
+    phoneNumberId.addEventListener("blur", validatephoneNumberId);
+    phoneNumberId.addEventListener("focus", deletephoneNumberId);
+    password1Id.addEventListener("blur", validatepassword1Id);
+    password1Id.addEventListener("focus", deletepassword1Id);
+    password2Id.addEventListener("blur", validatepassword2Id);
+    password2Id.addEventListener("focus", deletepassword2Id);
+    btnCreate.addEventListener("click", buttonClicked);
+
+/*
     function validateInput(numberToValid) {
         console.log(numberToValid);
         switch(numberToValid){
@@ -376,7 +784,6 @@ window.onload = function () {
     }
 
     inputArrayVar[i].addEventListener("blur", validateInput(i));
-    inputArrayVar[i].addEventListener("focus", deleteText(i));
-    btnCreate.addEventListener("click", buttonClicked);
+    inputArrayVar[i].addEventListener("focus", deleteText(i));*/
 
 }
