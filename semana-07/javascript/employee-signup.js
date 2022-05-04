@@ -414,20 +414,46 @@ window.onload = function () {
         } else {
             fetch(signupServer+"?name="+varBig[0]+"&lastName="+varBig[2]+"&dni="+varBig[4]+"&dob="+varBig[6]+"&phone="+
             varBig[8]+"&address="+varBig[1]+"&city="+varBig[3]+"&zip="+varBig[5]+"&email="+varBig[7]+"&password="+varBig[9])
-            .then(function (response) {
-                console.log(response);
+            .then(function(response){
                 return response.json();
-              })
-            .then(function (jsonResponse) {
-                console.log(jsonResponse)
-                alert(jsonResponse.msg)
+            })
+            .then(function(response){
+                alert(response.msg + ' ' + JSON.stringify(response)); 
+                response.data.dob =  year + "-" + month  + "-" + day ;
+                localStorage.setItem('Name',response.data.name);
+                localStorage.setItem('Surname',response.data.lastName);
+                localStorage.setItem('Id',response.data.dni);
+                localStorage.setItem('Date of birth',response.data.dob);
+                localStorage.setItem('Phone',response.data.phone);
+                localStorage.setItem('Address',response.data.address);
+                localStorage.setItem('City',response.data.city);
+                localStorage.setItem('Postal Code',response.data.zip);
+                localStorage.setItem('Email',response.data.email);
+                localStorage.setItem('Password',response.data.password);
             })
             .catch(function(error){
                 alert('Request error:' + error)
             })
         }
     }
+    
+    function restoreData () {
+        if(localStorage.getItem('Name')){
+            firstNameId.value = localStorage.getItem('Name');
+            lastNameId.value = localStorage.getItem('Surname');
+            idId.value = localStorage.getItem('Id');
+            birthDateId.value = localStorage.getItem('Date of birth');
+            phoneNumberId.value = localStorage.getItem('Phone');
+            fullAddressId.value = localStorage.getItem('Address');
+            cityId.value = localStorage.getItem('City');
+            postalCodeId.value = localStorage.getItem('Postal Code');
+            emailId.value = localStorage.getItem('Email');
+            password1Id.value = localStorage.getItem('Password');
+            password2Id.value =localStorage.getItem('Password');
+        }
+    }
 
+    restoreData();
 
     firstNameId.addEventListener("blur", validateFirstName);
     firstNameId.addEventListener("focus", deleteFirstName);
