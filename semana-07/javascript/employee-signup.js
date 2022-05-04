@@ -8,6 +8,7 @@ window.onload = function () {
     var idId = document.getElementById("id-number");
     var postalCodeId = document.getElementById("postal-code");
     var birthDateId = document.getElementById("birth-date");
+    var fullDate;
     var emailId = document.getElementById("email-login");
     var phoneNumberId = document.getElementById("phone-number");
     var password1Id = document.getElementById("password-login");
@@ -29,7 +30,7 @@ window.onload = function () {
             numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
         } else {
             firstNameId.classList.add("input-red");
-            nameFirstError.innerHTML = 'It needs at least 3 letters';
+            nameFirstError.innerHTML = 'It needs at least 4 letters';
         }
     }
 
@@ -54,7 +55,7 @@ window.onload = function () {
             numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
         } else {
             lastNameId.classList.add("input-red");
-            lastNameError.innerHTML = 'It needs at least 3 letters';
+            lastNameError.innerHTML = 'It needs at least 4 letters';
         }
     }
 
@@ -66,7 +67,7 @@ window.onload = function () {
             numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
         } else {
             cityId.classList.add("input-red");
-            cityError.innerHTML = 'It needs 3 characters';
+            cityError.innerHTML = 'It needs 4 numbers&letters';
         }
     }
 
@@ -96,9 +97,16 @@ window.onload = function () {
     }
 
     function validatebirthDateId() {
-        temporalInput = inputArrayVar[i].value;
-        if (temporalInput.length > 7) {
+        var birthDateError = document.getElementById("birth-date-id");
+        temporalInput = birthDateId.value.split('-');
+        year = temporalInput[0];
+        month = temporalInput[1];
+        day = temporalInput[2];
+        fullDate = day + '/' + month + '/' + year;
+        if (year > 1920 && year < 2002 && month > 0 && month < 13 && day > 0 && day < 32) {
         } else {
+            birthDateId.classList.add("input-red");
+            birthDateError.innerHTML = 'Enter a valid Date';
         }
     }
 
@@ -120,7 +128,7 @@ window.onload = function () {
             letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
         } else {
             phoneNumberId.classList.add("input-red");
-            phoneNumberError.innerHTML = 'It needs +10 numbers';
+            phoneNumberError.innerHTML = 'It needs 10 numbers';
         }
     }
 
@@ -132,7 +140,7 @@ window.onload = function () {
             numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
         } else {
             password1Id.classList.add("input-red");
-            password1Error.innerHTML = 'It needs +8 characters';
+            password1Error.innerHTML = 'It needs +8 nrs/ltrs';
         }
     }
 
@@ -222,10 +230,16 @@ window.onload = function () {
     }
 
     function deletebirthDateId() {
-        temporalInput = inputArrayVar[i].value;
-        if (temporalInput.length > 7) {
+        var birthDateError = document.getElementById("birth-date-id");
+        temporalInput = birthDateId.value.split('-');
+        year = temporalInput[0];
+        month = temporalInput[1];
+        day = temporalInput[2];
+        fullDate = day + '/' + month + '/' + year;
+        if (year > 1920 && year < 2002 && month > 0 && month < 13 && day > 0 && day < 32) {
         } else {
-            
+            birthDateId.classList.remove("input-red");
+            birthDateError.innerHTML = '';
         }
     }
 
@@ -275,7 +289,8 @@ window.onload = function () {
     }
 
     function buttonClicked() {
-        var temporalInput,str,varBig;
+        var temporalInput,str;
+        varBig = [];
 
         for (var i = 0; i <= 10; i++){
             switch(i){
@@ -286,7 +301,7 @@ window.onload = function () {
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('First Name Invalid');
+                        varBig[11] = 'The first name '+ temporalInput + ' needs at least 4 letters';
                     }
                     break;
                 case 1:
@@ -297,7 +312,7 @@ window.onload = function () {
                         symbols.includes(str)) === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('Address Invalid');
+                        varBig[11] += '\nThe address ' + temporalInput + ' needs at least 5 numbers&letters and a space';
                     }
                     break;
                 case 2:
@@ -307,7 +322,7 @@ window.onload = function () {
                         numbers.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('Last Name Invalid');
+                        varBig[11] += '\nThe Last Name ' + temporalInput + ' needs at least 4 letters';
                     }
                     break;
                 case 3:
@@ -317,7 +332,7 @@ window.onload = function () {
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('City Invalid');
+                        varBig[11] += '\nThe city '+ temporalInput +' needs at least 4 numbers&letters';
                     }
                     break;
                 case 4:
@@ -327,7 +342,7 @@ window.onload = function () {
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('ID Number Invalid');
+                        varBig[11] += '\nThe ID '+temporalInput+' needs at least 7 numbers';
                     }
                     break;
                 case 5:
@@ -338,15 +353,19 @@ window.onload = function () {
                         === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('Postal Code Invalid');
+                        varBig[11] += '\nThe Postal Code '+temporalInput+' needs between 4 and 5 numbers';
                     }
                     break;
                 case 6:
-                    temporalInput = birthDateId.value;
-                    if (temporalInput.length > 7) {
-                        varBig[i] = temporalInput;
+                    temporalInput = birthDateId.value.split('-');
+                    year = temporalInput[0];
+                    month = temporalInput[1];
+                    day = temporalInput[2];
+                    fullDate = day + '/' + month + '/' + year;
+                    if (year > 1920 && year < 2002 && month > 0 && month < 13 && day > 0 && day < 32) {
+                        varBig[i] = fullDate;
                     } else {
-                        alert('Birth date Invalid');
+                        varBig[11] += '\nThe birth Date '+fullDate+' needs to be valid';
                     }
                     break;
                 case 7:
@@ -354,7 +373,7 @@ window.onload = function () {
                     if (regex.test(temporalInput)) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('Email invalid');
+                        varBig[11] += '\nThe email'+temporalInput+' needs to be valid';
                     }
                     break;
                 case 8:
@@ -364,7 +383,7 @@ window.onload = function () {
                         letters.includes(str)) === false && str.some(str => symbols.includes(str)) === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('Phone Number Invalid');
+                        varBig[11] += '\nThe phone number '+temporalInput+' needs to have 10 numbers';
                     }
                     break;
                 case 9:
@@ -374,7 +393,7 @@ window.onload = function () {
                         numbers.includes(str)) === true && str.some(str => symbols.includes(str)) === false) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('Password Invalid');
+                        varBig[11] += '\nThe password '+temporalInput+' needs at least 8 numbers and letters';
                     }
                     break;
                 case 10:
@@ -383,12 +402,14 @@ window.onload = function () {
                     if (str === temporalInput && temporalInput.length > 7) {
                         varBig[i] = temporalInput;
                     } else {
-                        alert('Not the same as the first');
+                        varBig[11] += '\nThe password '+temporalInput+' is not the same as the first one';
                     }
                     break;
                 default:
             }
-            console.log(varBig);
+        }
+        if (varBig[11] != '') {
+            alert(varBig[11]);
         }
     }
 
